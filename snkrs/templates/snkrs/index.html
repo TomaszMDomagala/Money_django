@@ -1,0 +1,15 @@
+{% extends "spending/base.html" %}
+
+{% block content %}
+    <div class="content__header">
+    </div>
+    <div class="content__list">
+    {% for item in latest_spending %}
+        <div class="content__box">
+            <div class="content__name">
+                <h3>{{ name.name }}</h3>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

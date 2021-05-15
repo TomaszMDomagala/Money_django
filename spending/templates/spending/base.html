@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'spending/main.css' %}">
+    {% block title %}<title>Spendings</title>{% endblock %}
+</head>
+<body>
+    <div class="nav">
+        <div class="hamburger__menu">
+            <button class="hamburger">
+                <div class="hamburger__box">
+                    <div class="hamburger__inner"></div>
+                </div>
+            </button>
+        </div>
+        <div class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="{% url "main_page" %}">Home</a></li>
+                <li class="navigation__item"><a href="{% url "new_spending" %}">Add item</a></li>
+                <li class="navigation__item"><a href="{% url "snkrs" %}">Snkrs</a></li>
+                <li class="navigation__item"><a href="{% url "about_spending" %}">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+{% load static %}
+<script src="{% static "spending/burgermenu.js" %}"></script>
+</html>

@@ -1,0 +1,257 @@
+html {
+  -webkit-box-sizing: boarder-box;
+          box-sizing: boarder-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #313d52;
+}
+
+.buttons {
+  height: 35px;
+  width: 75px;
+  border-radius: 10%;
+  cursor: pointer;
+  border: 0px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #313d52;
+}
+
+.buttons a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #313d52;
+}
+
+.submit {
+  background-color: #648f7b;
+}
+
+.cancel {
+  background-color: #8f6564;
+}
+
+.hamburger__menu {
+  padding: 10px;
+}
+
+.hamburger {
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: 0px;
+  margin: 0px;
+  background-color: transparent;
+  -webkit-transition: 0.3s 0.1s ease-in-out;
+  transition: 0.3s 0.1s ease-in-out;
+}
+
+.hamburger--active {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+.hamburger__box {
+  width: 30px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: #c4c4c4;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: background-color 0.1s 0.2s ease-in-out;
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  width: 100%;
+  height: 3px;
+  background-color: #c4c4c4;
+  position: absolute;
+  content: "";
+  left: 0;
+  -webkit-transition: -webkit-transform 0.2s 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s 0.2s ease-in-out;
+  transition: transform 0.2s 0.2s ease-in-out;
+  transition: transform 0.2s 0.2s ease-in-out, -webkit-transform 0.2s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+  height: 100vh;
+  width: 300px;
+  background-color: #8dace3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: 0.3s 0.1s ease-in-out;
+  transition: 0.3s 0.1s ease-in-out;
+}
+
+.navigation--active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.navigation__list {
+  margin-top: 50px;
+  list-style: none;
+}
+
+.navigation__item {
+  padding: 10px;
+}
+
+.navigation__item a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #313d52;
+}
+
+.content {
+  color: #c4c4c4;
+}
+
+.content__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+.content__header h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content__total {
+  margin-left: 10px;
+}
+
+.content__list {
+  margin-left: 20px;
+}
+
+.content__list h3 {
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.content__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content__value {
+  margin-left: 10px;
+}
+
+.no__decoration {
+  text-decoration: none;
+  color: #c4c4c4;
+}
+
+.details__header {
+  text-align: center;
+}
+
+.details__header h3 {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.details__list {
+  margin-left: 20px;
+}
+
+.details__buttons {
+  margin-left: 20px;
+}
+
+.form {
+  margin-left: 20px;
+}
+
+.form label {
+  font-size: 20px;
+}
+
+.form div {
+  margin-bottom: 10px;
+}
+
+.form input {
+  width: 90%;
+  background-color: #313d52;
+  color: white;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin: 8px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.form textarea {
+  width: 93%;
+  background-color: #313d52;
+  border-radius: 8px;
+}
+
+.form select {
+  width: 93%;
+  background-color: #313d52;
+  border-radius: 8px;
+}
+
+.form select option {
+  font-size: 15px;
+  color: #c4c4c4;
+}
+
+.button__form {
+  margin-top: 5px;
+}
+/*# sourceMappingURL=main.css.map */

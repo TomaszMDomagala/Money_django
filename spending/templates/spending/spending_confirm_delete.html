@@ -1,0 +1,14 @@
+{% extends "spending/base.html" %}
+
+{% block content %}
+    <div class="details__list">
+        <form method="POST">
+            {% csrf_token %}
+            <h2>Are you sure you want to delete: {{ object.title }}?</h2>
+            <div>
+                <button class="buttons submit" type="submit">Yes</button>
+                <button class="buttons cancel"><a href="{% url 'spending_detail' object.uuid %}">No</a></button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

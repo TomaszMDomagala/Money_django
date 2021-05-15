@@ -1,0 +1,14 @@
+{% extends "spending/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="form">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+                {{ form|crispy }}
+            <div class="button__form">
+                <button class="buttons submit" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

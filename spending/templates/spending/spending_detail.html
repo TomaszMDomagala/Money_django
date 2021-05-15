@@ -1,0 +1,17 @@
+{% extends 'spending/base.html' %}
+
+{% block content %}
+    <div class="details__header">
+        <h3>{{ spending.title }}</h3>
+        <h3>{{ spending.value }}</h3>
+    </div>
+    <div class="details__buttons">
+        <button class="buttons submit"><a href="{% url 'update_spending' object.uuid %}">Update</a></button>
+        <button class="buttons cancel"><a href="{% url 'delete_spending' object.uuid %}">Delete</a></button>
+    </div>
+    <div class="details__list">
+        <h4>{{ spending.display_category }}</h4>
+        <p>{{ spending.description|linebreaks }}</p>
+        <p>{{ spending.date|date:"d-m-Y" }}</p>
+    </div>
+{% endblock %}
