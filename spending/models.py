@@ -14,7 +14,7 @@ class Spending(models.Model):
     value       = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField(max_length=1000, blank=True, null=True, help_text='Enter list of items, new line new item')
     category    = models.ManyToManyField(Category, help_text='Select category for this spending')
-    date        = models.DateField(null=True, blank=True)
+    date        = models.DateField(auto_now=True ,null=True, blank=True)
 
     def __str__(self):
         return self.title

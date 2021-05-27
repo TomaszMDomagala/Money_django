@@ -45,7 +45,7 @@ class SpendingDetailView(DetailView):
 
 class CreateSpendingView(CreateView):
     model = Spending
-    fields = ['title', 'value', 'description', 'category', 'date']
+    fields = ['title', 'value', 'description', 'category']
 
     def form_valid(self, form):
         return super().form_valid(form)
@@ -66,3 +66,4 @@ class SpendingDeleteView(DeleteView):
 
     def get_object(self, queryset=None):
         return Spending.objects.get(uuid=self.kwargs.get("uuid"))
+

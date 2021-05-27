@@ -19,6 +19,7 @@ class Snkr(models.Model):
     name        = models.CharField(max_length=100, blank=True, null=True)
     price       = models.DecimalField(max_digits=6, decimal_places=2, default=0)
     value       = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    cop         = models.BooleanField(blank=True, null=True)
     
     WANTED_CHOICE = (
         ('t', 'true'),
