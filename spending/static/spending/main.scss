@@ -232,3 +232,75 @@ body {
 .button__form {
   margin-top: 5px;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.scrambling {
+  padding: 10px;
+}
+
+#scramble {
+  font-size: 20px;
+}
+
+.wrapper {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#stopwatch {
+  font-size: 50px;
+  margin-top: 100px;
+}
+
+#start{
+  color: $accent;
+  font-size: 20px;
+	padding: 20px;
+  height: 50px;
+  width: 100px;
+	display: inline-block;
+	cursor: pointer;
+	border: 0px;
+	margin: 0px;
+  border-radius: 15%;
+	background-color: transparent;
+}
+
+#stop {
+  color: $accent;
+  font-size: 20px;
+  padding: 20px;
+  height: 50px;
+  width: 100px;
+	display: inline-block;
+	cursor: pointer;
+	border: 0px;
+	margin: 0px;
+  border-radius: 15%;
+	background-color: transparent;
+}
+
+#reset {
+  color: $accent;
+  font-size: 20px;
+  padding: 20px;
+  height: 50px;
+  width: 100px;
+	display: inline-block;
+	cursor: pointer;
+	border: 0px;
+	margin: 0px;
+  border-radius: 15%;
+	background-color: transparent;
+}
+
+.times__list {
+  text-align: center;
+  margin-top: 350px;
+}

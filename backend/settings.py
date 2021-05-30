@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'spending.apps.SpendingConfig',
     'snkrs.apps.SnkrsConfig',
+    'rubik.apps.RubikConfig',
     'crispy_forms',
     'rest_framework',
 ]

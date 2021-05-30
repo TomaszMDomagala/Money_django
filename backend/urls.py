@@ -8,5 +8,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('spending/', include('spending.urls')),
     path('snkrs/', include('snkrs.urls')),
+    path('rubik/', include('rubik.urls')),
     path('', RedirectView.as_view(url='spending/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

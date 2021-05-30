@@ -1,0 +1,10 @@
+{% extends 'spending/base.html' %}
+
+{% block content %}
+    {% for object in object_list %}
+    <div class="details__list">
+        <h3>{{ object.title }}</h3>
+        <h3>{{ object.value }}</h3>
+    </div>
+    {% endfor %}
+{% endblock %}

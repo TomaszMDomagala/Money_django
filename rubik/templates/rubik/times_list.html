@@ -1,0 +1,27 @@
+{% extends 'spending/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="timer">
+        <div class="scrambling">
+            <span id="scramble"></span>
+        </div>
+        <div class="wrapper">
+            <p id="stopwatch">
+                <span id="minutes"></span><span id="seconds">00</span>:<span id="milis">00</span>
+            </p>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    {% for object in object_list %}
+    <div class="times__list">
+        <h3>{{ object.time }}</h3>
+        <p>{{ object.date }}</p>
+    </div>
+    {% endfor %}
+
+    <script type="module" src="{% static 'rubik/timer.js' %}"></script>
+{% endblock %}
