@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from spending.models import Category, Spending
+from rest_framework     import viewsets
+from .serializers       import SpendingSerializer
 from django.views.generic import (
         ListView,
         DetailView,
@@ -67,3 +69,6 @@ class SpendingDeleteView(DeleteView):
     def get_object(self, queryset=None):
         return Spending.objects.get(uuid=self.kwargs.get("uuid"))
 
+class SpendingViewSet(viewsets.ModelViewSet):
+    serializer_class    = SpendingSerializer
+    queryset            = Spending.objects.all()
