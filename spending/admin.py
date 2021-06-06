@@ -5,7 +5,7 @@ admin.site.register(Category)
 
 @admin.register(Spending)
 class SpendingAdmin(admin.ModelAdmin):
-    list_display = ('title', 'value', 'description', 'display_category', 'date')
+    list_display = ('title', 'value', 'description', 'display_category')
 
     fieldsets = (
         (None, {
@@ -13,9 +13,6 @@ class SpendingAdmin(admin.ModelAdmin):
         }),
         ('category', {
             'fields': ('category', )
-        }),
-        ('Date', {
-            'fields': ('date', )
         }),
         ('Summary', {
             'fields': ('description', )

@@ -8,8 +8,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ['name', ]
 
 class SpendingSerializer(serializers.ModelSerializer):
-  category = CategorySerializer(many=True)
 
   class Meta:
     model = Spending
-    fields = ('uuid', 'title', 'value', 'description', 'category', 'date')
+    fields = ('uuid', 'title', 'value', 'description', 'date')
